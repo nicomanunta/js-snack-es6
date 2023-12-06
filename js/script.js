@@ -75,10 +75,10 @@ squadre.forEach(element => {
     element.falli_subiti = Math.floor(Math.random()* 50 + 1) 
     
 });
-console.log(squadre)
+console.log(squadre)    
+
 
 let squadreNuove= []
-
 squadre.forEach(element => {
     let {team, falli_subiti} = element
     let oggettiNuovi= {team, falli_subiti}
@@ -86,3 +86,73 @@ squadre.forEach(element => {
    
 });
 console.log(squadreNuove)
+
+
+
+// SNACK 3
+let moda = [
+    {
+        name: "Poppy",
+        type: "tshirt",
+        color: "red"
+    },
+    {
+        name: "Jumping",
+        type: "occhiali",
+        color: "blue"
+    }, 
+    {
+        name: "CrissCross",
+        type: "scarpe",
+        color: "black"
+    }, 
+    {
+        name: "Jenny",
+        type: "borsa",
+        color: "pink"
+    },
+]
+
+let lettera =["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+
+// let modaNuova= []
+let cartellino;
+
+    moda.forEach(element => {
+        result = Math.floor(Math.random() * lettera.length);
+        cartellino = lettera[result]
+        console.log(cartellino)
+        element.cartellino = cartellino
+    });
+    
+
+console.log(moda)
+
+
+
+// moda.forEach(element => {
+//     let {name, type, color, cartellino} = element
+//     let oggettoNuovo= {name, type, color, cartellino}
+//     modaNuova.push(oggettoNuovo)
+   
+// });
+// console.log(modaNuova)
+
+// let squareNuove= []
+// squadre.forEach(element => {
+//     let {team, falli_subiti} = element
+//     let oggettiNuovi= {team, falli_subiti}
+//     squadreNuove.push(oggettiNuovi)
+   
+// });
+// console.log(squadreNuove)
+
+
+
+
+
+
+
+
+
