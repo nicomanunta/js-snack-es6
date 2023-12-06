@@ -22,11 +22,10 @@ let bici = [
     }
 ]
 
-
+// creare una variabile da confrontare e sovrascrivere
 let peso_minore = 10000000000
 let bici_leggera;
 bici.forEach(element => {
-   
     if(element.peso < peso_minore){
         
         peso_minore = element.peso
@@ -40,32 +39,30 @@ console.log(`${nome} ${peso}`)
 
 
 
-
-
 // SNACK 2
 let squadre = [
     {
-        nome: "Milan",
+        team: "Milan",
         punti_fatti: 0,
         falli_subiti: 0
     },
     {
-        nome: "Cagliari",
+        team: "Cagliari",
         punti_fatti: 0,
         falli_subiti: 0
     },
     {
-        nome: "Juventus",
+        team: "Juventus",
         punti_fatti: 0,
         falli_subiti: 0
     },
     {
-        nome: "Roma",
+        team: "Roma",
         punti_fatti: 0,
         falli_subiti: 0
     },
     {
-        nome: "Atalanta",
+        team: "Atalanta",
         punti_fatti: 0,
         falli_subiti: 0
     }
@@ -73,21 +70,19 @@ let squadre = [
 
 ]
 
-
 squadre.forEach(element => {
-    
+    element.punti_fatti = Math.floor(Math.random()* 50 + 1) 
+    element.falli_subiti = Math.floor(Math.random()* 50 + 1) 
     
 });
+console.log(squadre)
 
-function randomNumber(){
-    return Math.floor(Math.random()* 100 + 1) 
-}
-randomNumber()
+let squadreNuove= []
 
-
-let newSquadre= []
 squadre.forEach(element => {
-    let {nome, falli_subiti} = element
-    newSquadre.push(nome, falli_subiti)
+    let {team, falli_subiti} = element
+    let oggettiNuovi= {team, falli_subiti}
+    squadreNuove.push(oggettiNuovi)
+   
 });
-console.log(newSquadre)
+console.log(squadreNuove)
